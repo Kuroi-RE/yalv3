@@ -137,27 +137,27 @@ client.on("message", async (message) => {
   if (message.author.bot) return;
   if (!message.author.id === "459277813506244618") return;
   if(message.content.startsWith("ramrole"))
-  let role1 = new MessageMenuOption()
+   const role1 = new MessageMenuOption()
     .setLabel("Giveaway")
     .setValue("giveaway")
     .setDescription("Pilih ini jika kamu ingin mendapatkan notif giveaway.");
   // .setEmoji("woman_red_haired");
-  let role2 = new MessageMenuOption()
+  const role2 = new MessageMenuOption()
     .setLabel("Pedofil")
     .setValue("pedofil")
     .setDescription("Pilih ini kalau kamu suka anak kecil!");
   // .setEmoji("man_red_haired");
-  let role3 = new MessageMenuOption()
+  const role3 = new MessageMenuOption()
     .setLabel("Fuckboy")
     .setValue("fuckboy")
     .setDescription("Pilih ini jika kamu merasa Fuckboy!");
   // .setEmoji("man_red_haired");
-  let role4 = new MessageMenuOption()
+  const role4 = new MessageMenuOption()
     .setLabel("Sadboy")
     .setValue("sadboy")
     .setDescription("Pilih ini jika kamu cowo dan tukang galau!");
   // .setEmoji("man_red_haired");
-  let role5 = new MessageMenuOption()
+  const role5 = new MessageMenuOption()
     .setLabel("Sadgirl")
     .setValue("sadgirl")
     .setDescription("Pilih ini jika kamu cewe dan tukang galau!");
