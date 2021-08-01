@@ -9,9 +9,10 @@ module.exports = {
   usage: ["[user] [role]"],
   async execute(message, args) {
     const user =
-      message.mentions.members.first() || message.guild.members.get(args[0]);
+      message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);
     const itsRole =
-      message.mentions.roles.first() || message.guild.roles.get(args[1]);
+      message.mentions.roles.first() || message.guild.roles.cache.get(args[1]);
 
     if (!user) return sendError("User tidak dapat ditemukan.", message.channel);
     if (!itsRole)
