@@ -8,7 +8,7 @@ const sendError = require("./Database/error.js");
 const { prefix, token, name } = require("./Database/client.json");
 
 const client = new Discord.Client();
-require('discord-buttons')(client)
+require("discord-buttons")(client);
 client.queue = new Map();
 // CLIENT //
 welcome(client);
@@ -136,88 +136,91 @@ const role = {
 client.on("message", async (message) => {
   if (message.author.bot) return;
   if (!message.author.id === "459277813506244618") return;
-  if(message.content.startsWith("ramrole"))
-   const role1 = new MessageMenuOption()
-    .setLabel("Giveaway")
-    .setValue("giveaway")
-    .setDescription("Pilih ini jika kamu ingin mendapatkan notif giveaway.");
-  // .setEmoji("woman_red_haired");
-  const role2 = new MessageMenuOption()
-    .setLabel("Pedofil")
-    .setValue("pedofil")
-    .setDescription("Pilih ini kalau kamu suka anak kecil!");
-  // .setEmoji("man_red_haired");
-  const role3 = new MessageMenuOption()
-    .setLabel("Fuckboy")
-    .setValue("fuckboy")
-    .setDescription("Pilih ini jika kamu merasa Fuckboy!");
-  // .setEmoji("man_red_haired");
-  const role4 = new MessageMenuOption()
-    .setLabel("Sadboy")
-    .setValue("sadboy")
-    .setDescription("Pilih ini jika kamu cowo dan tukang galau!");
-  // .setEmoji("man_red_haired");
-  const role5 = new MessageMenuOption()
-    .setLabel("Sadgirl")
-    .setValue("sadgirl")
-    .setDescription("Pilih ini jika kamu cewe dan tukang galau!");
-  // .setEmoji("man_red_haired");
-  const menu = new MessageMenu()
-    .setID("menu")
-    .setPlaceholder("Choose your Roles!")
-    .addOption(role1)
-    .addOption(role2)
-    .addOption(role3)
-    .addOption(role4)
-    .addOption(role5);
+  if (message.content.startsWith("ramrole")) {
+    const role1 = new MessageMenuOption()
+      .setLabel("Giveaway")
+      .setValue("giveaway")
+      .setDescription("Pilih ini jika kamu ingin mendapatkan notif giveaway.");
+    // .setEmoji("woman_red_haired");
+    const role2 = new MessageMenuOption()
+      .setLabel("Pedofil")
+      .setValue("pedofil")
+      .setDescription("Pilih ini kalau kamu suka anak kecil!");
+    // .setEmoji("man_red_haired");
+    const role3 = new MessageMenuOption()
+      .setLabel("Fuckboy")
+      .setValue("fuckboy")
+      .setDescription("Pilih ini jika kamu merasa Fuckboy!");
+    // .setEmoji("man_red_haired");
+    const role4 = new MessageMenuOption()
+      .setLabel("Sadboy")
+      .setValue("sadboy")
+      .setDescription("Pilih ini jika kamu cowo dan tukang galau!");
+    // .setEmoji("man_red_haired");
+    const role5 = new MessageMenuOption()
+      .setLabel("Sadgirl")
+      .setValue("sadgirl")
+      .setDescription("Pilih ini jika kamu cewe dan tukang galau!");
+    // .setEmoji("man_red_haired");
+    const menu = new MessageMenu()
+      .setID("menu")
+      .setPlaceholder("Choose your Roles!")
+      .addOption(role1)
+      .addOption(role2)
+      .addOption(role3)
+      .addOption(role4)
+      .addOption(role5);
     const guild = client.guilds.cache.get("744885612460507145");
     const channel = guild.channels.cache.get("871373544121053195");
-  const act = new Discord.MessageEmbed()
-  .setAuthor(guild.name + " Role Menu")
-  .setDescription("Ini adalah menu dari role gratis yang diberikan, silahkan pilih apa yg ingin kamu pilih!")
-  channel.send(act, menu);
+    const act = new Discord.MessageEmbed()
+      .setAuthor(guild.name + " Role Menu")
+      .setDescription(
+        "Ini adalah menu dari role gratis yang diberikan, silahkan pilih apa yg ingin kamu pilih!"
+      );
+    channel.send(act, menu);
 
-  client.on("clickMenu", async (menu) => {
-    switch (menu.values[0]) {
-      case "giveaway":
-        menu.reply.defer();
-        await menu.clicker.member.roles.add(role.giveaway);
-        menu.channel
-          .send(`${menu.clicker.user} Choose a new role! Giveaway.`)
-          .then((m) => m.delete({ timeout: 12000 }));
-        break;
-      case "pedofil":
-        menu.reply.defer();
-        await menu.clicker.member.roles.add(role.pedofil);
-        menu.channel
-          .send(`${menu.clicker.user} Choose a new role! Pedofil.`)
-          .then((m) => m.delete({ timeout: 12000 }));
-        break;
-      case "fuckboy":
-        menu.reply.defer();
-        await menu.clicker.member.roles.add(role.fuckboy);
-        menu.channel
-          .send(`${menu.clicker.user} Choose a new role! Fuckboy.`)
-          .then((m) => m.delete({ timeout: 12000 }));
-        break;
-      case "sadboy":
-        menu.reply.defer();
-        await menu.clicker.member.roles.add(role.sadboy);
-        menu.channel
-          .send(`${menu.clicker.user} Choose a new role! Sadboy.`)
-          .then((m) => m.delete({ timeout: 12000 }));
-        break;
-      case "sadgirl":
-        menu.reply.defer();
-        await menu.clicker.member.roles.add(role.sadgirl);
-        menu.channel
-          .send(`${menu.clicker.user} Choose a new role! Sadgirl.`)
-          .then((m) => m.delete({ timeout: 12000 }));
-        break;
-      default:
-        break;
-    }
-  });
+    client.on("clickMenu", async (menu) => {
+      switch (menu.values[0]) {
+        case "giveaway":
+          menu.reply.defer();
+          await menu.clicker.member.roles.add(role.giveaway);
+          menu.channel
+            .send(`${menu.clicker.user} Choose a new role! Giveaway.`)
+            .then((m) => m.delete({ timeout: 12000 }));
+          break;
+        case "pedofil":
+          menu.reply.defer();
+          await menu.clicker.member.roles.add(role.pedofil);
+          menu.channel
+            .send(`${menu.clicker.user} Choose a new role! Pedofil.`)
+            .then((m) => m.delete({ timeout: 12000 }));
+          break;
+        case "fuckboy":
+          menu.reply.defer();
+          await menu.clicker.member.roles.add(role.fuckboy);
+          menu.channel
+            .send(`${menu.clicker.user} Choose a new role! Fuckboy.`)
+            .then((m) => m.delete({ timeout: 12000 }));
+          break;
+        case "sadboy":
+          menu.reply.defer();
+          await menu.clicker.member.roles.add(role.sadboy);
+          menu.channel
+            .send(`${menu.clicker.user} Choose a new role! Sadboy.`)
+            .then((m) => m.delete({ timeout: 12000 }));
+          break;
+        case "sadgirl":
+          menu.reply.defer();
+          await menu.clicker.member.roles.add(role.sadgirl);
+          menu.channel
+            .send(`${menu.clicker.user} Choose a new role! Sadgirl.`)
+            .then((m) => m.delete({ timeout: 12000 }));
+          break;
+        default:
+          break;
+      }
+    });
+  }
 });
 
 client.login(token);
