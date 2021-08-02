@@ -140,27 +140,27 @@ client.on("message", async (message) => {
     const role1 = new MessageMenuOption()
       .setLabel("Giveaway")
       .setValue("giveaway")
-      .setDescription("Pilih ini jika kamu ingin mendapatkan notif giveaway.");
+      .setDescription("role untuk notif giveaway.");
     // .setEmoji("woman_red_haired");
     const role2 = new MessageMenuOption()
       .setLabel("Pedofil")
       .setValue("pedofil")
-      .setDescription("Pilih ini kalau kamu suka anak kecil!");
+      .setDescription("Role untuk pedofil");
     // .setEmoji("man_red_haired");
     const role3 = new MessageMenuOption()
       .setLabel("Fuckboy")
       .setValue("fuckboy")
-      .setDescription("Pilih ini jika kamu merasa Fuckboy!");
+      .setDescription("Role untuk Fuckboy!");
     // .setEmoji("man_red_haired");
     const role4 = new MessageMenuOption()
       .setLabel("Sadboy")
       .setValue("sadboy")
-      .setDescription("Pilih ini jika kamu cowo dan tukang galau!");
+      .setDescription("Role untuk Sadboy!");
     // .setEmoji("man_red_haired");
     const role5 = new MessageMenuOption()
       .setLabel("Sadgirl")
       .setValue("sadgirl")
-      .setDescription("Pilih ini jika kamu cewe dan tukang galau!");
+      .setDescription("Role untuk Sadgirl!");
     // .setEmoji("man_red_haired");
     const menu = new MessageMenu()
       .setID("menu")
