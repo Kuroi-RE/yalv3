@@ -10,7 +10,7 @@ module.exports = (client) => {
     if (msg.author.bot) return;
     if (msg.mentions.has(client.user.id)) {
       msg.reply(
-        "Aku mendengarmu! Silahkan ketik .help untuk melihat apa saja yang bisa saya lakukan"
+        "I will be die in april because Discord JS 12 is die too"
       );
     }
   });
@@ -23,7 +23,7 @@ module.exports = (client) => {
       const word = message.content.split(" ").join(" ");
       if (message.author.bot) return;
       request(
-        `https://api.simsimi.net/v1/?text=${word}&lang=id`,
+        `https://api.simsimi.net/v2/?text=${word}&lc=id`,
         function (error, response, body) {
           if (!error && response.statusCode === 200) {
             var res = JSON.parse(body);

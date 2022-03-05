@@ -1,10 +1,10 @@
 module.exports = (client) => {
   client.on("guildMemberAdd", (member) => {
     let charList = [
-      `Welcome ${member} [${member.tag}], Let's hangout with other members!`,
-      `${member} [${member.tag}] Just joined Server! Can anyone tell him/her the rules here?`,
-      `Welcome ${member} [${member.tag}] You can read the rules of this server in the channel rules!`,
-      `Welcome ${member} [${member.tag}], I hope you are happy on this server!`,
+      `Welcome ${member}, Let's hangout with other members!`,
+      `${member} Just joined Server! Can anyone tell him/her the rules here?`,
+      `Welcome ${member}, You can read the rules of this server in the channel rules!`,
+      `Welcome ${member}, I hope you are happy on this server!`,
     ];
     const channelID = "744885700532371588";
     let guild = client.guilds.cache.get("744885612460507145");

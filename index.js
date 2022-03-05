@@ -217,6 +217,7 @@ client.on("message", async (message) => {
             .then((m) => m.delete({ timeout: 12000 }));
           break;
         default:
+          menu.reply.defer();
           break;
       }
     });

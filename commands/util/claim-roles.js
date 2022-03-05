@@ -1,15 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const sendError = require("../../Database/error");
-const role = {
-  giveaway: "750397476476813362",
-  pedofil: "744924147292962916",
-  fuckboy: "744924152296898591",
-  sadboy: "744923764935884890",
-  sadgirl: "744924030359961640",
-  notify: "749999044721508392",
-  ads: "745227013387976784",
-  noads: "768021798427557888",
-};
+
 
 module.exports = {
   name: "claim-roles",
