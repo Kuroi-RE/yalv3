@@ -9,16 +9,8 @@ module.exports = {
      * @param {Client} client
      */
   execute(client) {
-   
-    const sol = `
-    ${chalk.red("====================================")}
-    =  ${chalk.blue("RUNNING THE BOTS")}            
-    =  ${chalk.green.bold("BOT READYY")}
-    =  ${chalk.green.bold("WELCOME TO DISCORD")}            
-    ${chalk.red("====================================")}
-    `;
-    client.user.setActivity("Ended service at April!", {type: "WATCHING"})
-    client.user.setStatus("dnd")
-    console.log(sol);
+    client.user.setActivity("Ended service at April!", {type: "WATCHING"});
+    client.user.setStatus("dnd");
+    console.log("Connected");
   },
 };
