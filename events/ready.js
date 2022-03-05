@@ -10,7 +10,6 @@ module.exports = {
      */
   execute(client) {
     client.user.setActivity("Ended service at April!", {type: "WATCHING"});
-    client.user.setStatus("dnd");
     console.log("Connected");
   },
 };
